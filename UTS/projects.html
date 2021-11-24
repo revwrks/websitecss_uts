@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>REVOLTGRP</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+	</style>
+</head>
+<body>
+	<!-- Navbar -->
+	<div class="w3-top">
+		<div class="w3-bar w3-white w3-card" id="myNavbar">
+			<a href="home.html" class="w3-bar-item w3-wide"><img src="src/REVOLTGRP_small.png" width="42" height="40"></a>
+			<!-- Responsive Hidden Nav -->
+			<div class="w3-right w3-hide-small">
+				<a href="home.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+				<a href="projects.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PROJECTS</a>
+				<a href="aboutme.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ABOUT ME</a>
+			</div>
+
+			<!-- Menuicon -->
+			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-right w3-hide-medium w3-hide-large" style="display:none; width:200px; right: 0;" id="mySidebar">
+		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+		<a href="home.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+		<a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+		<a href="aboutme.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+	</nav>
+	<!-- Gallery Section -->
+	<div class="w3-container" style="padding:80px 16px">
+		<h3 class="w3-center">PROJECTS</h3>
+		<p class="w3-center w3-large">Here's some of my Project and Photos</p>
+
+			<!-- Photo Grid -->
+			<div class="w3-row-padding" style="margin-bottom:128px">
+				<div class="w3-third">
+					<img src="src/jakarta_kfc.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jakartan Street Vendor">
+					<img src="src/jakarta_gojek1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="'Ojek' or Taxi Bike in Jakarta">
+					<img src="src/bandung_window.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Some house at Bandung">
+					<img src="src/REVOLTGRPxVIII.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="REVOLT x VII Vol.1">
+					<img src="src/bandung_gang.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Streets in Bandung">
+					<img src="src/oldbuilding2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="THIS IS NOT KEDIRI !!!!">
+				</div>
+
+				<div class="w3-third">
+					<img src="src/REVOLTGRP.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Revoltgrp Logo">
+					<img src="src/bandung_house.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Some house at Bandung">
+					<img src="src/jakarta_halte.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bus Stop at Jakarta">
+					<img src="src/evox_side.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Heavily Modified Mitsubishi Evolution X">
+					<img src="src/jakarta_mrt2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Man on Transjakarta Bus">
+					<img src="src/jakarta_japan.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jakarta Japanese Restaurant">
+					<img src="src/240sx.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Street Spec Nissan Silvia 240SX">
+				</div>
+
+				<div class="w3-third">
+					<img src="src/silvia_front.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Street Spec Nissan Silvia S15">
+					<img src="src/bandung_backlight.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The silhouette of my friend">
+					<img src="src/jakarta_skyline.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jakartan Skylines">
+					<img src="src/oldbuilding1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="An old building in paris">
+					<img src="src/jakarta_billboard.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jakarta Traffic">
+					<img src="src/REVOLTGRPxVIII 2.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="REVOLT x VII Vol.2">
+				</div>
+			</div>
+
+			<!-- Modal for full size images on click-->
+			<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+				<span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+				<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+					<img id="img01" class="w3-image">
+					<p id="caption" class="w3-opacity w3-large"></p>
+				</div>
+			</div>
+		</div>
+
+			<!-- Footer -->
+			<footer class="w3-center w3-black w3-padding-64">
+				<div class="w3-xlarge w3-section">
+					<!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
+					<a href="https://www.instagram.com/itzrevv/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+					<a href="https://wa.me/1628723822?text=I've%20seen%20your%20website%20!" target="_blank" rel="noopener noreferrer"><i class="fa fa fa-whatsapp w3-hover-opacity"></i></a>
+					<a href="https://pinterest.com/revworks/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+					<a href="https://github.com/revwrks" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+		</div>
+		<p>Made by <a href="https://www.instagram.com/itzrevv/" title="Rev Insta" target="_blank" class="w3-hover-text-pink">Rev.</a></p>
+	</footer>
+	<script>
+// Modal Image Gallery
+function onClick(element) {
+	document.getElementById("img01").src = element.src;
+	document.getElementById("modal01").style.display = "block";
+	var captionText = document.getElementById("caption");
+	captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+	if (mySidebar.style.display === 'block') {
+		mySidebar.style.display = 'none';
+	} else {
+		mySidebar.style.display = 'block';
+	}
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+	mySidebar.style.display = "none";
+}
+</script>
+</body>
+</html>
